@@ -37,7 +37,7 @@ const videos = [
     {
         name: "avengers-2",
         displayName: "Avengers : The Age of Ultron",
-        trailer: `${path}/avengers_2/avengers-2-trailer.mp4`,
+        trailer: `${path}/avengers_2/avengers-2-trailer.mov`,
         logo: `${path}/avengers_2/avengers-2-logo.png`,
         poster: `${path}/avengers_2/avengers-2-poster.jpg`,
         genres: [ action, superHero, exciting, sciFi],
@@ -57,7 +57,7 @@ const videos = [
     {
         name: "fast-and-furious-7",
         displayName: "Fast And Furious 7",
-        tailer: `${path}/fast_and_furious_7/fast-and-furious-7-trailer.mp4`,
+        tailer: `${path}/fast_and_furious_7/fast-and-furious-7-trailer.mov`,
         logo: `${path}/fast_and_furious_7/fast-and-furious-7-logo.png`,
         poster: `${path}/fast_and_furious_7/fast-and-furious-7-poster.jpg`,
         genres: [ action ],
@@ -97,7 +97,7 @@ const videos = [
     {
         name: "once-upon-a-time-in-hollywood",
         displayName: "Once Upon a Time in Hollywood",
-        tailer: `${path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-trailer.mov`,
+        tailer: `${path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-trailer.mp4`,
         logo: `${path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-logo.png`,
         poster: `${path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-poster.jpg`,
         genres: [ drama, comedy ],
@@ -107,7 +107,7 @@ const videos = [
     {
         name: "oppenheimer",
         displayName: "Oppenheimer",
-        tailer: `${path}/oppenheimer/oppenheimer-trailer.mov`,
+        tailer: `${path}/oppenheimer/oppenheimer-trailer.mp4`,
         logo: `${path}/oppenheimer/oppenheimer-logo.png`,
         poster: `${path}/oppenheimer/oppenheimer-poster.jpg`,
         genres: [ sciFi, drama, science, exciting ],
@@ -127,7 +127,7 @@ const videos = [
     {
         name: "spider-man-across-the-spider-verse",
         displayName: "Spider Man : Across the Spider Verse",
-        tailer: `${path}/spider_man_scross_the_spider_verse/spider-man-across-the-spider-verse-trailer.mov`,
+        tailer: `${path}/spider_man_scross_the_spider_verse/spider-man-across-the-spider-verse-trailer.mp4`,
         logo: `${path}/spider_man_scross_the_spider_verse/spider-man-across-the-spider-verse-logo.png`,
         poster: `${path}/spider_man_scross_the_spider_verse/spider-man-across-the-spider-verse-poster.jpg`,
         genres: [ superHero, action ],
@@ -137,7 +137,7 @@ const videos = [
     {
         name: "the-conjuring-2",
         displayName: "The Conjuring 2",
-        tailer: `${path}/the_conjuring_2/the-conjuring-2-trailer.mov`,
+        tailer: `${path}/the_conjuring_2/the-conjuring-2-trailer.mp4`,
         logo: `${path}/the_conjuring_2/the-conjuring-2-logo.png`,
         poster: `${path}/the_conjuring_2/the-conjuring-2-poster.jpg`,
         genres: [ horror, thriller, suspense ],
@@ -147,7 +147,7 @@ const videos = [
     {
         name: "transformers",
         displayName: "Transformers : The Last Knight",
-        tailer: `${path}/transformers/transformers-trailer.mov`,
+        tailer: `${path}/transformers/transformers-trailer.mp4`,
         logo: `${path}/transformers/transformers-logo.png`,
         poster: `${path}/transformers/transformers-poster.jpg`,
         genres: [ sciFi, action ],

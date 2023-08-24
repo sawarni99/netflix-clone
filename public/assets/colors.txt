@@ -1,0 +1,4 @@
+#54B9C5 - Cyan
+#808080 - Gray
+#000000 - Black
+#FFFFFF - White

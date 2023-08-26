@@ -1,10 +1,11 @@
 import './App.css';
-import ManageProfilePage from './pages/manage-profile/manage-profile';
+import Home from './pages/home/home';
+import ManageProfile from './pages/manage-profile/manage-profile'
 
 function App() {
   return (
     <div className="App">
-        <ManageProfilePage />
+      <Home />
     </div>
   );
 }

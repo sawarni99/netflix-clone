@@ -3,7 +3,7 @@
   --text-color: #FFFFFF;
   --text-color-secondary: #54B9C5;
   --text-color-gray: #808080;
-  --color-light-gray: #e6e6e6;
+  --color-light-gray: #cfcfcf;
 
 }
 
@@ -12,4 +12,8 @@ body {
   font-family: netflix-sans;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+button {
+  font-family: netflix-sans;
 }

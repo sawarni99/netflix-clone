@@ -1,0 +1,77 @@
+.nav-bar{
+    height: 68px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    width: 100%;
+    position: fixed;
+    padding-right: 60px;
+    display: flex;
+}
+
+.nav-bar-before{
+    transition: 1s;
+}
+
+.nav-bar-scrolled{
+    background-color: var(--bg-color);
+    transition: 0.2s;
+}
+
+#nav-bar-left{
+    width: 100%;
+    flex: 1;
+    margin-left:60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#nav-bar-center{
+    width: 100%;
+    flex: 7.5;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#nav-bar-right{
+    width: 100%;
+    flex: 1;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nav-bar-logo{
+    width: 67%;
+    cursor: pointer;
+}
+
+.nav-bar-link{
+    background: transparent;
+    color: var(--color-light-gray);
+    border: none;
+    font-size: 89%;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 1%;
+}
+
+.nav-bar-link:hover{
+    color: var(--text-color-gray);
+}
+
+.nav-bar-link:focus{
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.nav-bar-right-icon{
+    height: 38%;
+}
+
+.profile-img{
+    height: 32px;
+    width: 32px;
+    border-radius: 4px;
+}

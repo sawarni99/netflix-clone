@@ -2,3 +2,4 @@
 #808080 - Gray
 #000000 - Black
 #FFFFFF - White
+#141414 - dark-gray

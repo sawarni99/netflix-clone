@@ -1,14 +1,37 @@
 import './nav-bar.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { profiles } from '../../assets';
 
 const NavBar = () => {
 
     const [scrolled, setScrolled] = useState(false);
+    const [searchClicked, setSearchClicked] = useState(false);
+    const inputRef = useRef(null);
 
+    // Handling scroll effect...
     useEffect(()=>{
         window.addEventListener('scroll', listenScrollEvent);
+        
+        return () => {
+            window.removeEventListener('scroll', listenScrollEvent);
+        }
     }, []);
+
+    // Handling Clicking outside of the input search box...
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutsideInput);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutsideInput);
+        }
+    }, [inputRef])
+
+
+    const handleClickOutsideInput = (event) =>{
+        if(inputRef.current && !inputRef.current.contains(event.target)){
+            setSearchClicked(false);
+        }
+    }
 
     const listenScrollEvent = () =>{
         if(window.scrollY > 0){
@@ -16,6 +39,10 @@ const NavBar = () => {
         }else{
             setScrolled(false);
         }
+    }
+
+    const onClickSearch = () => {
+        setSearchClicked(true);
     }
 
     const onClickMenu = () =>{
@@ -32,11 +59,40 @@ const NavBar = () => {
                     <button className="nav-bar-link" onClick={onClickMenu}>TV Shows</button>
                 </div>
                 <div id="nav-bar-right">
-                    <img className="nav-bar-right-icon" src='./assets/icons/search-icon.png' alt="Search" />
-                    <img className="nav-bar-right-icon" src='./assets/icons/notification-icon.png' alt="Notification" />
+
+                    {(searchClicked) ? 
+                        <div id="nav-bar-search-container">
+                            <img 
+                                id="nav-bar-search-input-icon" 
+                                src='./assets/icons/search-icon.png' 
+                                alt="Search"
+                            />
+
+                            <input 
+                                id='nav-bar-search-input'
+                                ref={inputRef}
+                                placeholder='Title, people, genres'
+                            />
+                        </div> : 
+                        <img 
+                            className="nav-bar-right-icon" 
+                            id="nav-bar-search" 
+                            src='./assets/icons/search-icon.png' 
+                            alt="Search"
+                            onClick={onClickSearch}
+                        />
+                    }
+            
+                    <img 
+                        className="nav-bar-right-icon" 
+                        id="nav-bar-notification" 
+                        src='./assets/icons/notification-icon.png' 
+                        alt="Notification" 
+                    />
+                    
                     <div id='nav-bar-right-pofile'>
                         <img className="profile-img" src={profiles[0].dp} alt={profiles[0].name} />
-                        {/* <img id="profile-selector" src="./assets/icons/right-menu-triangle-icon.png" alt="" /> */}
+                        <img id="profile-selector" src="./assets/icons/right-menu-triangle-icon.png" alt="" />
                     </div>
                 </div>
             </div>

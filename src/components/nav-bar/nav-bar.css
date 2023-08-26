@@ -1,6 +1,6 @@
 .nav-bar{
     height: 68px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     width: 100%;
     position: fixed;
     padding-right: 60px;
@@ -27,7 +27,7 @@
 
 #nav-bar-center{
     width: 100%;
-    flex: 7.5;
+    flex: 4.5;
     display:flex;
     align-items: center;
     justify-content: flex-start;
@@ -35,11 +35,11 @@
 
 #nav-bar-right{
     width: 100%;
-    flex: 1;
+    flex: 4;
     margin-right: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 #nav-bar-logo{
@@ -67,11 +67,64 @@
 }
 
 .nav-bar-right-icon{
-    height: 38%;
+    height: 33%;
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+#nav-bar-right-pofile{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .profile-img{
     height: 32px;
     width: 32px;
     border-radius: 4px;
+}
+
+#profile-selector{
+    height: 15px;
+    transform: rotate(90deg);
+    margin: 15%;
+    transition: 0.4s;
+}
+
+#nav-bar-right-pofile:hover #profile-selector{
+    transform: rotate(270deg);
+}
+
+
+#nav-bar-search-container {
+    display: flex;
+    align-items: center;
+    height: 48%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-right: 22px;
+    border: solid white 1px;
+    width: 50%;
+    animation-name: right-to-left;
+    animation-duration: 0.5s;
+}
+
+#nav-bar-search-input-icon{
+    height: 60%;
+    margin: 7px;
+}
+
+#nav-bar-search-input{
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 95%;
+    caret-color: white;
+    color: white;
+    animation-name: right-to-left;
+    animation-duration: 0.5s;
+}
+
+@keyframes right-to-left {
+    from {width: 0%}
+    to {width: 50%}
 }

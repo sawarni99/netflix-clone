@@ -1,5 +1,6 @@
 import './home.css';
 import NavBar from '../../components/nav-bar/nav-bar';
+import PreviewVideo from '../../components/preview-video/preview-video';
 
 function Home() {
     return (
@@ -7,6 +8,9 @@ function Home() {
             <nav>
                 <NavBar />
             </nav>
+            <main>
+                <PreviewVideo />
+            </main>
         </div>
     )
 }

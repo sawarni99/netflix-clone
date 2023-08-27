@@ -58,7 +58,7 @@ const videos = [
     {
         name: "fast-and-furious-7",
         displayName: "Fast And Furious 7",
-        tailer: `${videos_path}/fast_and_furious_7/fast-and-furious-7-trailer.mov`,
+        trailer: `${videos_path}/fast_and_furious_7/fast-and-furious-7-trailer.mov`,
         logo: `${videos_path}/fast_and_furious_7/fast-and-furious-7-logo.png`,
         poster: `${videos_path}/fast_and_furious_7/fast-and-furious-7-poster.jpg`,
         genres: [ action ],
@@ -68,7 +68,7 @@ const videos = [
     {
         name: "mission-impossible-rouge-nation",
         displayName: "Mission Impossible : Rouge Nation",
-        tailer: `${videos_path}/mission_impossible_rouge_nation/mission-impossible-rouge-nation-trailer.mp4`,
+        trailer: `${videos_path}/mission_impossible_rouge_nation/mission-impossible-rouge-nation-trailer.mp4`,
         logo: `${videos_path}/mission_impossible_rouge_nation/mission-impossible-rouge-nation-logo.png`,
         poster: `${videos_path}/mission_impossible_rouge_nation/mission-impossible-rouge-nation-poster.jpg`,
         genres: [ action, suspense ],
@@ -78,7 +78,7 @@ const videos = [
     {
         name: "naruto-shippuden",
         displayName: "Naruto Shippuden",
-        tailer: `${videos_path}/naruto_shippuden/naruto-shippuden-trailer.mp4`,
+        trailer: `${videos_path}/naruto_shippuden/naruto-shippuden-trailer.mp4`,
         logo: `${videos_path}/naruto_shippuden/naruto-shippuden-logo.png`,
         poster: `${videos_path}/naruto_shippuden/naruto-shippuden-poster.jpe`,
         genres: [ anime, action, exciting ],
@@ -88,7 +88,7 @@ const videos = [
     {
         name: "omg-2",
         displayName: "OMG 2",
-        tailer: `${videos_path}/omg_2/omg-2-trailer.mp4`,
+        trailer: `${videos_path}/omg_2/omg-2-trailer.mp4`,
         logo: `${videos_path}/omg_2/omg-2-logo.png`,
         poster: `${videos_path}/omg_2/omg-2-poster.avif`,
         genres: [ indian, drama, comedy ],
@@ -98,7 +98,7 @@ const videos = [
     {
         name: "once-upon-a-time-in-hollywood",
         displayName: "Once Upon a Time in Hollywood",
-        tailer: `${videos_path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-trailer.mp4`,
+        trailer: `${videos_path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-trailer.mp4`,
         logo: `${videos_path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-logo.png`,
         poster: `${videos_path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-poster.jpg`,
         genres: [ drama, comedy ],
@@ -108,7 +108,7 @@ const videos = [
     {
         name: "oppenheimer",
         displayName: "Oppenheimer",
-        tailer: `${videos_path}/oppenheimer/oppenheimer-trailer.mp4`,
+        trailer: `${videos_path}/oppenheimer/oppenheimer-trailer.mp4`,
         logo: `${videos_path}/oppenheimer/oppenheimer-logo.png`,
         poster: `${videos_path}/oppenheimer/oppenheimer-poster.jpg`,
         genres: [ sciFi, drama, science, exciting ],
@@ -118,7 +118,7 @@ const videos = [
     {
         name: "shutter-island",
         displayName: "Shutter Island",
-        tailer: `${videos_path}/shutter_island/shutter-island-trailer.mov`,
+        trailer: `${videos_path}/shutter_island/shutter-island-trailer.mov`,
         logo: `${videos_path}/shutter_island/shutter-island-logo.png`,
         poster: `${videos_path}/shutter_island/shutter-island-poster.jpg`,
         genres: [ suspense, exciting, thriller ],
@@ -128,9 +128,9 @@ const videos = [
     {
         name: "spider-man-across-the-spider-verse",
         displayName: "Spider Man : Across the Spider Verse",
-        tailer: `${videos_path}/spider_man_scross_the_spider_verse/spider-man-across-the-spider-verse-trailer.mp4`,
-        logo: `${videos_path}/spider_man_scross_the_spider_verse/spider-man-across-the-spider-verse-logo.png`,
-        poster: `${videos_path}/spider_man_scross_the_spider_verse/spider-man-across-the-spider-verse-poster.jpg`,
+        trailer: `${videos_path}/spider_man_across_the_spider_verse/spider-man-across-the-spider-verse-trailer.mp4`,
+        logo: `${videos_path}/spider_man_across_the_spider_verse/spider-man-across-the-spider-verse-logo.png`,
+        poster: `${videos_path}/spider_man_across_the_spider_verse/spider-man-across-the-spider-verse-poster.jpg`,
         genres: [ superHero, action ],
         rated: thirteen_plus_rated,
         decription: "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.",
@@ -138,7 +138,7 @@ const videos = [
     {
         name: "the-conjuring-2",
         displayName: "The Conjuring 2",
-        tailer: `${videos_path}/the_conjuring_2/the-conjuring-2-trailer.mp4`,
+        trailer: `${videos_path}/the_conjuring_2/the-conjuring-2-trailer.mp4`,
         logo: `${videos_path}/the_conjuring_2/the-conjuring-2-logo.png`,
         poster: `${videos_path}/the_conjuring_2/the-conjuring-2-poster.jpg`,
         genres: [ horror, thriller, suspense ],
@@ -148,12 +148,23 @@ const videos = [
     {
         name: "transformers",
         displayName: "Transformers : The Last Knight",
-        tailer: `${videos_path}/transformers/transformers-trailer.mp4`,
+        trailer: `${videos_path}/transformers/transformers-trailer.mp4`,
         logo: `${videos_path}/transformers/transformers-logo.png`,
         poster: `${videos_path}/transformers/transformers-poster.jpg`,
         genres: [ sciFi, action ],
         rated: thirteen_plus_rated,
         decription: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
+    },
+    {
+        name: "attack-on-titan",
+        displayName: "Attcak on Titan",
+        trailer: `${videos_path}/attack_on_titans/attack-on-titans-trailer.mp4`,
+        logo: `${videos_path}/attack_on_titans/attack-on-titans-logo.png`,
+        poster: `${videos_path}/attack_on_titans/attack-on-titans-poster.jpg`,
+        previewImg: `${videos_path}/attack_on_titans/attack-on-titans-preview-img.png`,
+        genres: [action, exciting, anime],
+        rated: sixteen_plus_rated,
+        description: "After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.",
     }
 ]
 

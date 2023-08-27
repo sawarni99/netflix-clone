@@ -1,0 +1,38 @@
+#priview-video {
+    position: relative;
+    width: 100%;
+}
+
+#preview-video-video {
+    border: none;
+    width: 100%;
+    object-fit: fill;
+}
+
+#preview-video-video:focus {
+    outline: 0;
+}
+
+#preview-video-img{
+    width: 100%;
+    object-fit: fill;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+}
+
+#preview-video-meta{
+    position: absolute;
+    width: 100%;
+    border: solid red 1px;
+    top:0;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

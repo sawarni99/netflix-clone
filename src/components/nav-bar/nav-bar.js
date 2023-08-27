@@ -1,6 +1,7 @@
 import './nav-bar.css';
 import { useState, useEffect, useRef } from 'react';
 import { profiles } from '../../assets';
+import ProfileMenu from '../profile-menu/profile-menu';
 
 const NavBar = () => {
 
@@ -91,7 +92,12 @@ const NavBar = () => {
                     />
                     
                     <div id='nav-bar-right-pofile'>
-                        <img className="profile-img" src={profiles[0].dp} alt={profiles[0].name} />
+                        <div id='nav-bar-profile-img-container'>
+                            <img className="profile-img" src={profiles[0].dp} alt={profiles[0].name} />
+                            <div id="nav-bar-profile-menu">
+                                <ProfileMenu profile={profiles[0]} />
+                            </div>
+                        </div>
                         <img id="profile-selector" src="./assets/icons/right-menu-triangle-icon.png" alt="" />
                     </div>
                 </div>

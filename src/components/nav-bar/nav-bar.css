@@ -78,6 +78,24 @@
     cursor: pointer;
 }
 
+#nav-bar-profile-img-container{
+    position: relative;
+}
+
+#nav-bar-profile-menu {
+    visibility: hidden;
+    position: absolute;
+    right: -50%;
+    margin-top: 2px;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+#nav-bar-right-pofile:hover #nav-bar-profile-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
 .profile-img{
     height: 32px;
     width: 32px;
@@ -127,4 +145,9 @@
 @keyframes right-to-left {
     from {width: 0%}
     to {width: 50%}
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

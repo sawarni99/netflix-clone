@@ -3,8 +3,9 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     width: 100%;
     position: fixed;
-    padding-right: 60px;
+    padding-right: var(--margin-value);
     display: flex;
+    z-index: 10;
 }
 
 .nav-bar-before{
@@ -19,7 +20,7 @@
 #nav-bar-left{
     width: 100%;
     flex: 1;
-    margin-left:60px;
+    margin-left: var(--margin-value);
     display: flex;
     justify-content: flex-start;
     align-items: center;

@@ -1,0 +1,49 @@
+.button-primary {
+    height: 43px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.button-primary:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.button-primary:active {
+    background-color: rgba(178, 178, 178, 0.5);
+}
+
+.button-secondary {
+    height: 43px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.75);
+    color: white;
+}
+
+.button-secondary:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+#button-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-icon {
+    height: 60%;
+    margin-right: 5%;
+}
+
+#button-text {
+    font-family: netflix-sans-bold;
+    font-size: 1.13vw;
+    /* font-weight: 700; */
+    letter-spacing: 0.2px;
+    margin-left: 5%;
+}

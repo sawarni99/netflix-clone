@@ -43,7 +43,7 @@ const videos = [
         poster: `${videos_path}/avengers_2/avengers-2-poster.jpg`,
         genres: [ action, superHero, exciting, sciFi],
         rated: thirteen_plus_rated,
-        decription: "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
+        description: "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
     },
     {
         name: "demon-slayer",
@@ -53,7 +53,7 @@ const videos = [
         poster: `${videos_path}/demon_slayer/demon-slayer-poster.jpg`,
         genres: [ anime, action, exciting ],
         rated: sixteen_plus_rated,
-        decription: "A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.",
+        description: "A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.",
     },
     {
         name: "fast-and-furious-7",
@@ -63,7 +63,7 @@ const videos = [
         poster: `${videos_path}/fast_and_furious_7/fast-and-furious-7-poster.jpg`,
         genres: [ action ],
         rated: sixteen_plus_rated,
-        decription: "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+        description: "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
     },
     {
         name: "mission-impossible-rouge-nation",
@@ -73,7 +73,7 @@ const videos = [
         poster: `${videos_path}/mission_impossible_rouge_nation/mission-impossible-rouge-nation-poster.jpg`,
         genres: [ action, suspense ],
         rated: thirteen_plus_rated,
-        decription: "Ethan and his team take on their most impossible mission yet when they have to eradicate an international rogue organization as highly skilled as they are and committed to destroying the IMF.",
+        description: "Ethan and his team take on their most impossible mission yet when they have to eradicate an international rogue organization as highly skilled as they are and committed to destroying the IMF.",
     },
     {
         name: "naruto-shippuden",
@@ -83,7 +83,7 @@ const videos = [
         poster: `${videos_path}/naruto_shippuden/naruto-shippuden-poster.jpe`,
         genres: [ anime, action, exciting ],
         rated: seven_plus_rated,
-        decription: "Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who constantly searches for approval and recognition, as well as to become Hokage, who is acknowledged as the leader and strongest of all ninja in the village.",
+        description: "Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who constantly searches for approval and recognition, as well as to become Hokage, who is acknowledged as the leader and strongest of all ninja in the village.",
     },
     {
         name: "omg-2",
@@ -93,7 +93,7 @@ const videos = [
         poster: `${videos_path}/omg_2/omg-2-poster.avif`,
         genres: [ indian, drama, comedy ],
         rated: seven_plus_rated,
-        decription: "An unhappy civilian asks the court to mandate comprehensive education in schools in a dramatic yet amusing courtroom play.",
+        description: "An unhappy civilian asks the court to mandate comprehensive education in schools in a dramatic yet amusing courtroom play.",
     },
     {
         name: "once-upon-a-time-in-hollywood",
@@ -103,7 +103,7 @@ const videos = [
         poster: `${videos_path}/once_upon_a_time_in_hollywood/once-upon-a-time-in-hollywood-poster.jpg`,
         genres: [ drama, comedy ],
         rated: a_rated,
-        decription: "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.",
+        description: "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.",
     },
     {
         name: "oppenheimer",
@@ -113,7 +113,7 @@ const videos = [
         poster: `${videos_path}/oppenheimer/oppenheimer-poster.jpg`,
         genres: [ sciFi, drama, science, exciting ],
         rated: thirteen_plus_rated,
-        decription: "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.",
+        description: "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.",
     },
     {
         name: "shutter-island",
@@ -123,7 +123,7 @@ const videos = [
         poster: `${videos_path}/shutter_island/shutter-island-poster.jpg`,
         genres: [ suspense, exciting, thriller ],
         rated: eighteen_plus_rated,
-        decription: "Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.",
+        description: "Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.",
     },
     {
         name: "spider-man-across-the-spider-verse",
@@ -133,7 +133,7 @@ const videos = [
         poster: `${videos_path}/spider_man_across_the_spider_verse/spider-man-across-the-spider-verse-poster.jpg`,
         genres: [ superHero, action ],
         rated: thirteen_plus_rated,
-        decription: "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.",
+        description: "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.",
     },
     {
         name: "the-conjuring-2",
@@ -143,7 +143,7 @@ const videos = [
         poster: `${videos_path}/the_conjuring_2/the-conjuring-2-poster.jpg`,
         genres: [ horror, thriller, suspense ],
         rated: r_rated,
-        decription: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
+        description: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
     },
     {
         name: "transformers",
@@ -153,7 +153,7 @@ const videos = [
         poster: `${videos_path}/transformers/transformers-poster.jpg`,
         genres: [ sciFi, action ],
         rated: thirteen_plus_rated,
-        decription: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
+        description: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
     },
     {
         name: "attack-on-titan",
@@ -164,7 +164,7 @@ const videos = [
         previewImg: `${videos_path}/attack_on_titans/attack-on-titans-preview-img.png`,
         genres: [action, exciting, anime],
         rated: sixteen_plus_rated,
-        description: "After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.",
+        description: "After his hometown is destroyed and his is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.",
     }
 ]
 

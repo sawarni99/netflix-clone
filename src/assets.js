@@ -151,9 +151,10 @@ const videos = [
         trailer: `${videos_path}/transformers/transformers-trailer.mp4`,
         logo: `${videos_path}/transformers/transformers-logo.png`,
         poster: `${videos_path}/transformers/transformers-poster.jpg`,
+        previewImg: `${videos_path}/transformers/transformers-preview-img.png`,
         genres: [ sciFi, action ],
         rated: thirteen_plus_rated,
-        description: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
+        description: "A deadly threat from Earth's history reappears and a hunt for a lost artifact takes place between Autobots and Decepticons, while Optimus Prime encounters his creator in space.",
     },
     {
         name: "attack-on-titan",

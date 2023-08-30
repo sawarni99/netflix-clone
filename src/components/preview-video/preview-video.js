@@ -11,7 +11,7 @@ const PreviewVideo = () => {
     const descRef = useRef(null);
     const timeout = 5;
     const maxDescLength = 190;
-    const video = videos[12];  // Change this by passing props...
+    const video = videos[11];  // Change this by passing props...
     const videoDescription = (video.description.length > maxDescLength) ?
          video.description.substring(0, maxDescLength) + '...' : video.description;
 

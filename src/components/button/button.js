@@ -1,6 +1,6 @@
 import './button.css'
 
-const Button = ({className, type, text, icon}) => {
+const Button = ({className, type, text, icon, onClick}) => {
 
     if(type === 'primary'){
         className = `button-primary ${className}`
@@ -11,7 +11,7 @@ const Button = ({className, type, text, icon}) => {
     }
 
     return (
-        <button className={className}>
+        <button className={className} onClick={onClick}>
             <div id='button-container'>
                 <img id='button-icon' src={icon} alt='' />
                 <span id='button-text'> {text} </span>

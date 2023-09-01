@@ -4,15 +4,29 @@
     left: 0;
     z-index: 20;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
 }
 
-#video-info-video{
-    border: solid 2px red;
-    width: 55%;
-    margin-top: 2%;
-    border-radius: 1.2%;
+#video-info-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    -ms-overflow-style: none;
+}
+
+#video-info-video {
+    width: 850px;
+    margin-top: 35px;
+    min-height: 150vh;
+    border-radius : 10px 10px 0 0;
+    background-color: var(--bg-color);
+}
+
+#video-info-container::-webkit-scrollbar {
+    display: none;
 }

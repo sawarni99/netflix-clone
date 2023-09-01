@@ -2,7 +2,7 @@ import './video-meta.css'
 import { useEffect, useRef } from 'react';
 import Button from '../button/button';
 
-const VideoMeta = ({video, videoRef, ended, setEnded, muted, setMuted}) => {
+const VideoMeta = ({video, videoRef, ended, setEnded, muted, setMuted, onInfoClicked, infoClicked}) => {
 
     const logoRef = useRef(null);
     const descRef = useRef(null);
@@ -10,6 +10,17 @@ const VideoMeta = ({video, videoRef, ended, setEnded, muted, setMuted}) => {
     const maxDescLength = 190;
     const videoDescription = (video.description.length > maxDescLength) ?
          video.description.substring(0, maxDescLength) + '...' : video.description;
+
+    // To make the video stop and resume when more info is clicked in closed...
+    useEffect(() => {
+        if(!ended){
+            if(infoClicked){
+                videoRef.current.pause();
+            }else{
+                videoRef.current.play();
+            }
+        }
+    }, [infoClicked, videoRef]);
 
     // Change left side of the screen while video is playing...
     useEffect(() => {
@@ -41,6 +52,15 @@ const VideoMeta = ({video, videoRef, ended, setEnded, muted, setMuted}) => {
         }
     }
 
+    // On click More Info...
+    const onClickInfo = () => {
+        if(ended){
+            onInfoClicked(0);
+        }else{
+            onInfoClicked(videoRef.current.currentTime);
+        }
+    }
+
     return (
         <div id='video-meta'>
             <div id='video-meta-left'>
@@ -61,7 +81,9 @@ const VideoMeta = ({video, videoRef, ended, setEnded, muted, setMuted}) => {
                         className='video-info-btn' 
                         type='secondary' 
                         text='More Info' 
-                        icon='./assets/icons/info-icon.png'/>
+                        icon='./assets/icons/info-icon.png'
+                        onClick={onClickInfo}
+                        />
                 </div>
             </div>
             <div id='video-meta-right'>

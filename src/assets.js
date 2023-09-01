@@ -154,6 +154,9 @@ const videos = [
         previewImg: `${videos_path}/transformers/transformers-preview-img.png`,
         genres: [ sciFi, action ],
         rated: thirteen_plus_rated,
+        release: '2017',
+        match: '52%',
+        duration: '2h 34m',
         description: "A deadly threat from Earth's history reappears and a hunt for a lost artifact takes place between Autobots and Decepticons, while Optimus Prime encounters his creator in space.",
     },
     {
@@ -165,6 +168,9 @@ const videos = [
         previewImg: `${videos_path}/attack_on_titans/attack-on-titans-preview-img.png`,
         genres: [action, exciting, anime],
         rated: sixteen_plus_rated,
+        release: '2013',
+        match: '98%',
+        duration: '4 Seasons',
         description: "After his hometown is destroyed and his is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.",
     }
 ]

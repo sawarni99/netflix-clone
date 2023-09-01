@@ -20,7 +20,7 @@ const VideoMeta = ({video, videoRef, ended, setEnded, muted, setMuted, onInfoCli
                 videoRef.current.play();
             }
         }
-    }, [infoClicked, videoRef]);
+    }, [infoClicked, videoRef, ended]);
 
     // Change left side of the screen while video is playing...
     useEffect(() => {

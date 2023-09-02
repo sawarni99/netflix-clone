@@ -1,9 +1,11 @@
 #section-video-preview {
-    width: 23%;
+    position: absolute;
+    width: 145%;
     border-radius: 10px 10px 0 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--bg-color);
     cursor: pointer;
+    top: 0;
 }
 
 #section-video-preview-video {

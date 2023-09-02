@@ -1,12 +1,10 @@
 import './section-video-preview.css'
 import { useState, useRef, useEffect } from 'react';
-import VideoInfo from '../video-info/video-info';
 
-const SectionVideoPreview = ({video}) => {
+const SectionVideoPreview = ({video, onClickInfo}) => {
 
     const [ended, setEnded] = useState(false);
     const [muted, setMuted] = useState(true);
-    const [infoClicked, setInfoClicked] = useState(false);
     const videoRef = useRef(null);
 
     const onEnded = () => {
@@ -16,22 +14,12 @@ const SectionVideoPreview = ({video}) => {
     let genres = [];
     video.genres.forEach(element => {
         genres.push(element);
-        genres.push(<div/>);
+        genres.push(<div key={element}/>);
     });
     genres.pop();
 
-    useEffect(() => {
-        if(!ended){
-            if(infoClicked) {
-                videoRef.current.pause();
-            }else {
-                videoRef.current.play();
-            }
-        }
-    })
-
-    const onClickInfo = () => {
-        setInfoClicked(infoClicked => !infoClicked);
+    const onInfoClicked = () => {
+        onClickInfo();
     }
 
     return (
@@ -53,7 +41,7 @@ const SectionVideoPreview = ({video}) => {
                     <div id='section-video-preview-info-play'>
                         <img src='./assets/icons/play-icon.png' alt='Play' />
                     </div>
-                    <div id='section-video-preview-info-info' onClick={onClickInfo}>
+                    <div id='section-video-preview-info-info' onClick={onInfoClicked}>
                         <img src='./assets/icons/forword-arrow.png' alt='Play' />
                     </div>
                 </div>
@@ -70,7 +58,6 @@ const SectionVideoPreview = ({video}) => {
                     }
                 </div>
             </div>
-            { infoClicked &&<VideoInfo video={video} startTime={0} onInfoClicked={onClickInfo} infoClicked={infoClicked} /> }
         </div>
     )
 }

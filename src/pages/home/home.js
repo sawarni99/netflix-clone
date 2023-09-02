@@ -4,9 +4,10 @@ import PreviewVideo from '../../components/preview-video/preview-video';
 import VideoInfo from '../../components/video-info/video-info';
 import { videos } from '../../assets';
 import { useState } from 'react';
+import Section from '../../components/section/section';
 
 function Home() {
-    const video = videos[11];
+    const video = videos[12];
     const [infoClicked, setInfoClicked] = useState(false);
     const [startTime, setStartTime] = useState(0);
 
@@ -33,6 +34,14 @@ function Home() {
                         startTime={startTime} 
                     /> 
                 }
+                <div id='home-menu-container'>
+                    <div id='home-menu'>
+                        <div id='home-menu-gradiant' />
+                        <div id='home-menu-section'>
+                            <Section name='Popular on Netflix' />
+                        </div>
+                    </div>
+                </div>
             </main>
         
         </div>

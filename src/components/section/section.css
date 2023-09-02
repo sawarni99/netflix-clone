@@ -1,0 +1,7 @@
+#section-header{
+    margin-left: var(--margin-value);
+    font-size: 1.35vw;
+    font-family: netflix-sans;
+    font-weight: 600;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,11 @@
+#section-video {
+    position: relative;
+}
+
+#section-video-poster {
+    border-radius: inherit;
+    cursor: pointer;
+    height: 20%;
+    width: 15%;
+    border-radius: 3.5%;
+}

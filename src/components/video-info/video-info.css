@@ -17,6 +17,8 @@
     overflow-y: scroll;
     overscroll-behavior: contain;
     -ms-overflow-style: none;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
 }
 
 #video-info-video {
@@ -25,6 +27,8 @@
     height: 110vh;
     border-radius : 8px 8px 0 0;
     background-color: var(--bg-color);
+    animation-name: pop-out;
+    animation-duration: 0.5s;
 }
 
 #video-info-container::-webkit-scrollbar {

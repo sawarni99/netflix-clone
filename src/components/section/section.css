@@ -5,3 +5,10 @@
     font-weight: 600;
     margin-bottom: 15px;
 }
+
+#section-menu {
+    display: flex;
+    gap: 0.5%;
+    margin-left: var(--margin-value);
+    border: 1px solid red;
+}

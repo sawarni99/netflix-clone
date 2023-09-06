@@ -1,14 +1,104 @@
 #section-video {
-    position: relative;
-    border: solid 1px red;
-    height: 20%;
     width: 15%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#section-video-video {
+    border-radius: inherit;
+    width: 100%;
 }
 
 #section-video-poster {
-    border-radius: inherit;
-    cursor: pointer;
-    height: 100%;
     width: 100%;
-    border-radius: 3.5%;
+    border-radius: inherit;
+}
+
+#section-video-info{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--bg-color);
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5%;
+    font-size: 0.7vw;
+}
+
+#section-video-info-top {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+}
+
+#section-video-info-top img {
+    width: 50%;
+}
+
+#section-video-info-top div {
+    width: 13%;
+    aspect-ratio: 1;
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#section-video-info-play {
+    background: white;
+    border: 2px white solid;
+}
+
+
+#section-video-info-info {
+    border: 2px var(--color-light-gray) solid;
+    background: rgba(245, 245, 245, 0.062);
+}
+
+#section-video-info-info img {
+    transform: rotate(90deg);
+}
+
+#section-video-info-mid {
+    flex: 1;
+    color: var(--text-color-gray);
+}
+
+#section-video-info-match {
+    color: var(--color-light-green);
+}
+
+#section-video-info-rated {
+    font-size: 0.6vw;
+    border: 1px solid white;
+    padding: 3px;
+    opacity: 0.8;
+}
+
+#section-video-info-bottom {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
+
+#section-video-info-bottom div {
+    border-radius: 500px;
+    height: 5px;
+    width: 5px;
+    background-color: var(--text-color-gray);
+    opacity: 0.6;
+}
+
+#section-video:hover {
+    transform: scale(1.5);
+    border-radius: 5px 5px 0 0;
+}
+
+#section-video:hover #section-video-info{
+    display: flex;
 }

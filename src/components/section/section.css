@@ -1,4 +1,8 @@
-#section-header{
+/* #section {
+    border: 1px solid blue;
+} */
+
+#section-header {
     margin-left: var(--margin-value);
     font-size: 1.35vw;
     font-family: netflix-sans;
@@ -6,9 +10,25 @@
     margin-bottom: 15px;
 }
 
+#section-menu-container {
+    border: 1px solid green;
+    display: flex;
+    gap: 0.5%;
+}
+
 #section-menu {
     display: flex;
     gap: 0.5%;
-    margin-left: var(--margin-value);
+    width: 100%;
     border: 1px solid red;
+}
+
+#section-menu-left {
+    border: 1px solid blue;
+    width: var(--margin-value);
+}
+
+#section-menu-right {
+    border: 1px solid blue;
+    width: var(--margin-value);
 }

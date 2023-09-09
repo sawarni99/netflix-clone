@@ -1,18 +1,19 @@
 #section-video {
-    min-width: 220px;
-    width: 100%;
+    flex: 0 0 calc(var(--video-card-width) - 2 * var(--box-gap));
+    aspect-ratio: 16 / 9;
+    margin: var(--box-gap);
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--bg-color);
     cursor: pointer;
     transition: 0.5s;
     transform-origin: bottom;
 }
 
-#section-video:hover {
+/* #section-video:hover {
     transform: scale(1.5);
     border-radius: 5px 5px 0 0;
-}
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
 
 #section-video-video {
     border-radius: inherit;
@@ -104,3 +105,4 @@
     background-color: var(--text-color-gray);
     opacity: 0.6;
 }
+

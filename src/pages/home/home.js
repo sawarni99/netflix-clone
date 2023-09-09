@@ -20,11 +20,11 @@ function Home() {
 
     return (
         <div id="home">
-            <nav>
+            {/* <nav>
                 <NavBar />
-            </nav>
+            </nav> */}
             <main>
-                <PreviewVideo video={video} onInfoClicked={onInfoClicked} infoClicked={infoClicked} />
+                {/* <PreviewVideo video={video} onInfoClicked={onInfoClicked} infoClicked={infoClicked} />
                 {
                     infoClicked && 
                     <VideoInfo 
@@ -33,7 +33,7 @@ function Home() {
                         infoClicked={infoClicked} 
                         startTime={startTime} 
                     /> 
-                }
+                } */}
                 <div id='home-menu-container'>
                     <div id='home-menu'>
                         <div id='home-menu-gradiant' />

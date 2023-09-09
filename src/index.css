@@ -5,7 +5,10 @@
   --text-color-gray: #808080;
   --color-light-gray: #bcbcbc;
   --color-light-green: #46D369;
-  --margin-value: 60px;
+  --margin-value: 4%;
+  --box-gap: 0.3%;
+  --items-per-screen: 6;
+  --video-card-width: calc(100% / var(--items-per-screen));
 }
 
 body {
@@ -22,6 +25,8 @@ button {
 input {
   font-family: netflix-sans;
 }
+
+/* Animations */
 
 @keyframes fade-in {
   from {
@@ -51,3 +56,22 @@ input {
   }
 }
 
+/* Screen resizing media queries */
+
+@media (max-width: 1300px) {
+  :root {
+      --items-per-screen: 5;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+      --items-per-screen: 4;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+      --items-per-screen: 3;
+  }
+}

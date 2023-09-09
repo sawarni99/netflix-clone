@@ -55,7 +55,7 @@ const SectionVideo = ({video}) => {
                     </video> : 
                     <img id='section-video-poster' src={video.poster} alt={video.displayName} />
                 }
-                {
+                {/* {
                     mouseOver &&
                     <div id='section-video-info'>
                         <div id='section-video-info-top'>
@@ -79,7 +79,7 @@ const SectionVideo = ({video}) => {
                             }
                         </div>
                     </div>
-                }
+                } */}
             </div>
             { 
                 infoClicked && 

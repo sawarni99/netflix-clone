@@ -9,6 +9,7 @@
   --box-gap: 0.3%;
   --items-per-screen: 6;
   --video-card-width: calc(100% / var(--items-per-screen));
+  --initial-index: 10;
 }
 
 body {

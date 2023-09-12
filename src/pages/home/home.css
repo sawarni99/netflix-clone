@@ -19,19 +19,6 @@
     position: relative;
 }
 
-#home-menu-gradiant {
-    position: absolute;
-    width: 100%;
-    top: -10vh;
-    height: 10vh;
-    background-image: linear-gradient(
-        rgba(20, 20, 20, 0) 0%, 
-        rgba(20, 20, 20, 0.5) 50%,
-        rgba(20, 20, 20) 90%,
-        rgba(20, 20, 20) 100%
-    );
-}
-
 #home-menu-section {
     position: absolute;
     width: 100%;

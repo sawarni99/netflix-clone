@@ -58,6 +58,7 @@ const PreviewVideo = ({info, video, onInfoClicked, startTime, infoClicked}) => {
                     infoClicked={infoClicked}
                 />
             }
+            <div id='preview-video-gradiant' />
         </div>
     )
 }

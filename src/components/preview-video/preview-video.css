@@ -24,3 +24,16 @@
     animation-duration: 0.5s;
     border-radius: inherit;
 }
+
+#preview-video-gradiant {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 20vh;
+    background-image: linear-gradient(
+        rgba(20, 20, 20, 0) 0%, 
+        rgba(20, 20, 20, 0.5) 50%,
+        rgba(20, 20, 20) 90%,
+        rgba(20, 20, 20) 100%
+    );
+}

@@ -1,6 +1,7 @@
 import './carousel.css'
 import { videos } from '../../assets';
 import VideoCard from '../video-card/video-card';
+import VideoInfo from '../video-info/video-info';
 import { useRef, useState } from 'react';
 import { getNumFromCSSUnit, getRootStyle, getStyle } from '../../helper';
 import { ITEM_PER_SCREEN, INITIAL_INDEX, VIDEO_CARD_WIDTH, SLIDE_TRANSITION_DELAY } from '../../constants';
@@ -16,6 +17,7 @@ const Carousel = ({name}) => {
         videos[0], videos[1], videos[2], videos[3], videos[4], videos[5], videos[6], videos[7], videos[8], videos[9],   
     ];
     const [videoCards, setvideoCards] = useState(videoArray);
+    const [currentVideo, setCurrentVideo] = useState(null);
 
     // On Click side bars...
     const onClickSlider = (increment) => {
@@ -132,6 +134,14 @@ const Carousel = ({name}) => {
             }
         }
     }
+
+    const onInfoClicked = (video) => {
+        if(typeof video === 'object'){
+            setCurrentVideo(video);
+        }else{
+            setCurrentVideo(null);
+        }
+    }
     
     return (
         <div id='carousel'>
@@ -146,8 +156,8 @@ const Carousel = ({name}) => {
                     <div id='carousel-menu-box-left' ref={boxRefLeft} />
                     {
                         videoCards.map(video => {
-                            const key = Date.now() * Math.random() // Generatin unique key...
-                            return <VideoCard video={video} key={key} />
+                            const key = Date.now() * Math.random() // Generating unique key...
+                            return <VideoCard setCurrentVideo={onInfoClicked} video={video} key={key} />
                         })
                     }
                 </div>
@@ -155,6 +165,14 @@ const Carousel = ({name}) => {
                     <img className='side-bar-icon' src='./assets/icons/forword-arrow.png' alt='Next' />
                 </div>
             </div>
+            {
+                (currentVideo !== null) ?
+                <VideoInfo 
+                    video={currentVideo} 
+                    onInfoClicked={onInfoClicked} 
+                    startTime={0} 
+                /> : null
+            }
         </div>
     )
 }

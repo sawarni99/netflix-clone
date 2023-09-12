@@ -2,13 +2,13 @@ import './video-info.css';
 import PreviewVideo from '../preview-video/preview-video';
 import { useRef } from 'react';
 
-const VideoInfo = ({video, onInfoClicked, startTime, infoClicked}) => {
+const VideoInfo = ({video, onInfoClicked, startTime}) => {
 
     const containerRef = useRef(null);
 
     const onClickBackground = (event) => {
         if(event.target === containerRef.current){
-            onInfoClicked(0);   
+            onInfoClicked(0);
         }
     }
 
@@ -20,7 +20,6 @@ const VideoInfo = ({video, onInfoClicked, startTime, infoClicked}) => {
                         info={true} 
                         video={video} 
                         onInfoClicked={onInfoClicked} 
-                        infoClicked={infoClicked} 
                         startTime={startTime} 
                     />
 

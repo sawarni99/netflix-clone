@@ -1,4 +1,4 @@
-#section-video {
+#video-card {
     flex: 0 0 calc(var(--video-card-width) - 2 * var(--box-gap));
     aspect-ratio: 16 / 9;
     margin: var(--box-gap);
@@ -9,23 +9,23 @@
     transform-origin: bottom;
 }
 
-#section-video:hover {
+#video-card:hover {
     transform: scale(1.5);
     border-radius: 5px 5px 0 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#section-video-video {
+#video-card-video {
     border-radius: inherit;
     width: 100%;
 }
 
-#section-video-poster {
+#video-card-poster {
     width: 100%;
     border-radius: inherit;
 }
 
-#section-video-info{
+#video-card-info{
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--bg-color);
@@ -36,21 +36,21 @@
     font-size: 0.7vw;
 }
 
-/* #section-video:hover #section-video-info{
+#video-card:hover #video-card-info{
     display: flex;
-} */
+}
 
-#section-video-info-top {
+#video-card-info-top {
     display: flex;
     flex: 2;
     justify-content: space-between;
 }
 
-#section-video-info-top img {
+#video-card-info-top img {
     width: 50%;
 }
 
-#section-video-info-top div {
+#video-card-info-top div {
     width: 13%;
     aspect-ratio: 1;
     border-radius: 500px;
@@ -60,45 +60,45 @@
     cursor: pointer;
 }
 
-#section-video-info-play {
+#video-card-info-play {
     background: white;
     border: 2px white solid;
 }
 
 
-#section-video-info-info {
+#video-card-info-info {
     border: 2px var(--color-light-gray) solid;
     background: rgba(245, 245, 245, 0.062);
 }
 
-#section-video-info-info img {
+#video-card-info-info img {
     transform: rotate(90deg);
 }
 
-#section-video-info-mid {
+#video-card-info-mid {
     flex: 1;
     color: var(--text-color-gray);
 }
 
-#section-video-info-match {
+#video-card-info-match {
     color: var(--color-light-green);
 }
 
-#section-video-info-rated {
+#video-card-info-rated {
     font-size: 0.6vw;
     border: 1px solid white;
     padding: 3px;
     opacity: 0.8;
 }
 
-#section-video-info-bottom {
+#video-card-info-bottom {
     flex: 1;
     display: flex;
     align-items: center;
     gap: 3%;
 }
 
-#section-video-info-bottom div {
+#video-card-info-bottom div {
     border-radius: 500px;
     height: 5px;
     width: 5px;

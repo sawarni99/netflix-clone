@@ -1,8 +1,8 @@
-import './section-video.css'
+import './video-card.css'
 import { useState, useRef } from 'react';
 import VideoInfo from '../video-info/video-info';
 
-const SectionVideo = ({video}) => {
+const VideoCard = ({video}) => {
 
     const [ended, setEnded] = useState(true);
     const [mouseOver, setMouseOver] = useState(false);
@@ -41,10 +41,10 @@ const SectionVideo = ({video}) => {
 
     return (
         <>
-            <div id='section-video' ref={mainRef} onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
+            <div id='video-card' ref={mainRef} onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
                 {!ended ? 
                     <video 
-                        id='section-video-video' 
+                        id='video-card-video' 
                         onEnded={onEnded} 
                         ref={videoRef} 
                         autoPlay 
@@ -52,27 +52,27 @@ const SectionVideo = ({video}) => {
                     >
                         <source src={video.trailer} />
                     </video> : 
-                    <img id='section-video-poster' src={video.poster} alt={video.displayName} />
+                    <img id='video-card-poster' src={video.poster} alt={video.displayName} />
                 }
                 {
                     mouseOver &&
-                    <div id='section-video-info'>
-                        <div id='section-video-info-top'>
-                            <div id='section-video-info-play'>
+                    <div id='video-card-info'>
+                        <div id='video-card-info-top'>
+                            <div id='video-card-info-play'>
                                 <img src='./assets/icons/play-icon.png' alt='Play' />
                             </div>
-                            <div id='section-video-info-info' onClick={onInfoClicked}>
+                            <div id='video-card-info-info' onClick={onInfoClicked}>
                                 <img src='./assets/icons/forword-arrow.png' alt='Play' />
                             </div>
                         </div>
-                        <div id='section-video-info-mid'>
-                            <span id='section-video-info-match'>{video.match} Match</span>
+                        <div id='video-card-info-mid'>
+                            <span id='video-card-info-match'>{video.match} Match</span>
                             &nbsp;&nbsp;&nbsp;
-                            <span id='section-video-info-rated'>{video.rated}</span>
+                            <span id='video-card-info-rated'>{video.rated}</span>
                             &nbsp;&nbsp;&nbsp;
-                            <span id='section-video-info-duration'>{video.duration}</span>
+                            <span id='video-card-info-duration'>{video.duration}</span>
                         </div>
-                        <div id='section-video-info-bottom'>
+                        <div id='video-card-info-bottom'>
                             {
                                 genres
                             }
@@ -81,14 +81,17 @@ const SectionVideo = ({video}) => {
                 }
             </div>
             { 
-                infoClicked && 
-                <VideoInfo 
-                    video={video} 
-                    onInfoClicked={onInfoClicked} 
-                    infoClicked={infoClicked} /> 
+            infoClicked && 
+            <VideoInfo 
+                video={video} 
+                onInfoClicked={onInfoClicked} 
+                infoClicked={infoClicked} 
+                startTime={0}
+                /> 
             }
+            
         </>
     )
 }
 
-export default SectionVideo;
+export default VideoCard;

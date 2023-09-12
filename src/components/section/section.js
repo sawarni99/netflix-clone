@@ -15,11 +15,7 @@ const Section = ({name}) => {
     const initialIndex = Number(getRootStyle(INITIAL_INDEX));
     const [sliderIndex, setSliderIndex] = useState(initialIndex);
     const videoArray = [      // These are just sample data...
-        <SectionVideo key='1' video={videos[0]} />, <SectionVideo key='2' video={videos[1]} />,
-        <SectionVideo key='3' video={videos[2]} />, <SectionVideo key='4' video={videos[3]} />,
-        <SectionVideo key='5' video={videos[4]} />, <SectionVideo key='6' video={videos[5]} />,
-        <SectionVideo key='7' video={videos[6]} />, <SectionVideo key='8' video={videos[7]} />,
-        <SectionVideo key='9' video={videos[10]} />, <SectionVideo key='10' video={videos[11]} />,
+        videos[0], videos[1], videos[2], videos[3], videos[4], videos[5], videos[6], videos[7], videos[8], videos[9],   
     ];
     const [sectionVideos, setSectionVideos] = useState(videoArray);
 
@@ -68,23 +64,26 @@ const Section = ({name}) => {
 
                     // Removing the cards which are not shown in screen, 
                     // because for some reasons they are not removed from UI if they are not in window...
-                    const removeLength = remaining - (itemIndex * itemsPerScreen);
-                    for(let i=0; i < removeLength; i++){
-                        mainRef.current.removeChild(mainRef.current.children[1]);
-                    }
+                    // const removeLength = remaining - (itemIndex * itemsPerScreen);
+                    // for(let i=0; i < removeLength; i++){
+                    //     mainRef.current.removeChild(mainRef.current.children[1]);
+                    // }
 
-                    setSectionVideos(sectionVideos => {
-                        const toRet = [
-                            ...sectionVideos.slice(itemsPerScreen, sectionVideoslength)
-                        ];
-                        console.log(toRet);
-                        
-                        index += 1;
-                        mainRef.current.style.transform = `translateX(calc(${index} * -100%))`;
-                        boxRefLeft.current.style.minWidth = `calc(${getStyle(boxRefLeft, 'min-width')} + 100%)`;
-                        setSliderIndex(index);
-                        return toRet;
-                    });
+                    index += 1;
+                    mainRef.current.style.transform = `translateX(calc(${index} * -100%))`;
+
+                    setTimeout(() => {
+                        setSectionVideos(sectionVideos => {
+                            const toRet = [
+                                ...sectionVideos.slice(itemsPerScreen, sectionVideoslength)
+                            ];
+                            console.log(toRet);
+                            
+                            boxRefLeft.current.style.minWidth = `calc(${getStyle(boxRefLeft, 'min-width')} + 100%)`;
+                            setSliderIndex(index);
+                            return toRet;
+                        });
+                    }, delay* 1000);
 
                 }
 
@@ -112,10 +111,10 @@ const Section = ({name}) => {
 
                     // Removing the cards which are not shown in screen, 
                     // because for some reasons they are not removed from UI if they are not in window...
-                    const removeLength = remaining - (itemIndex * itemsPerScreen);
-                    for(let i=0; i < removeLength; i++){
-                        mainRef.current.removeChild(mainRef.current.children[1]);
-                    }
+                    // const removeLength = remaining - (itemIndex * itemsPerScreen);
+                    // for(let i=0; i < removeLength; i++){
+                    //     mainRef.current.removeChild(mainRef.current.children[1]);
+                    // }
                     
                     setSectionVideos(sectionVideos => {
                         const toRet = [
@@ -148,7 +147,10 @@ const Section = ({name}) => {
                 <div id='section-menu' ref={mainRef}>
                     <div id='section-menu-box-left' ref={boxRefLeft} />
                     {
-                        sectionVideos
+                        sectionVideos.map(video => {
+                            const key = Date.now() * Math.random() // Generatin unique key...
+                            return <SectionVideo video={video} key={key} />
+                        })
                     }
                 </div>
                 <div id='section-menu-right' ref={rightSideBar} onClick={() => onClickSlider(true)}>

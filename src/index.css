@@ -10,6 +10,7 @@
   --items-per-screen: 6;
   --video-card-width: calc(100% / var(--items-per-screen));
   --initial-index: 10;
+  --slide-transition-delay: 0.8s;
 }
 
 body {

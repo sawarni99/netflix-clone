@@ -1,7 +1,6 @@
 import './section-video.css'
 import { useState, useRef } from 'react';
 import VideoInfo from '../video-info/video-info';
-// import { getStyle, getNumFromPx, getPxFromNum } from '../../helper';
 
 const SectionVideo = ({video}) => {
 
@@ -55,7 +54,7 @@ const SectionVideo = ({video}) => {
                     </video> : 
                     <img id='section-video-poster' src={video.poster} alt={video.displayName} />
                 }
-                {/* {
+                {
                     mouseOver &&
                     <div id='section-video-info'>
                         <div id='section-video-info-top'>
@@ -79,7 +78,7 @@ const SectionVideo = ({video}) => {
                             }
                         </div>
                     </div>
-                } */}
+                }
             </div>
             { 
                 infoClicked && 

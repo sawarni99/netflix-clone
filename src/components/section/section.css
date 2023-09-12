@@ -13,7 +13,8 @@
 #section-menu-container {
     width: 100%;
     justify-content: center;
-    /* overflow: hidden; */
+    overflow-y: visible;
+    overflow-x: clip;
     position: relative;
     display: flex;
 }
@@ -25,7 +26,6 @@
 }
 
 #section-menu-box-left {
-    border: 1px red solid;
     min-width: calc(var(--initial-index) * 100%);
 }
 

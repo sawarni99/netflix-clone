@@ -9,11 +9,11 @@
     transform-origin: bottom;
 }
 
-/* #section-video:hover {
+#section-video:hover {
     transform: scale(1.5);
     border-radius: 5px 5px 0 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-} */
+}
 
 #section-video-video {
     border-radius: inherit;

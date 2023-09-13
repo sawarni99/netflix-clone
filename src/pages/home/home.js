@@ -5,6 +5,7 @@ import VideoInfo from '../../components/video-info/video-info';
 import { videos } from '../../assets';
 import { useState } from 'react';
 import Carousel from '../../components/carousel/carousel';
+import { getRandomUniqueNumber } from '../../helper';
 
 function Home() {
     const video = videos[11]; // This video is for preview...
@@ -15,6 +16,12 @@ function Home() {
         setInfoClicked((infoClicked) => {
             setStartTime(time);
             return !infoClicked;
+        })
+    }
+
+    const getRandomVideos = (length) => {
+        return getRandomUniqueNumber(videos.length, length).map((index) => {
+            return videos[index];
         })
     }
 
@@ -34,11 +41,12 @@ function Home() {
                         startTime={startTime} 
                     /> 
                 }
-
-                <section id='home-menu'>
-                        <Carousel name='Blockbuster' />
-                        <Carousel name='Trending Now' />
-                        <Carousel name='Popular on Netflix' />
+                <section id='home-menu-container'>
+                    <div id='home-menu'>
+                        <Carousel name='Blockbuster' videos={getRandomVideos(10)} />
+                        <Carousel name='Trending Now' videos={getRandomVideos(10)} />
+                        <Carousel name='Popular on Netflix' videos={getRandomVideos(10)} />
+                    </div>
                 </section>
             </main>     
         </div>

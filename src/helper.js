@@ -6,3 +6,17 @@ export const getNumFromCSSUnit = (string, unit) => Number(string.substring(0, st
 
 export const getCSSunitFromNum = (num, unit) => String(num) + unit;
 
+export const getRandomUniqueNumber = (range, length = 1) => {
+    let index = 0;
+    let array = [];
+
+    while(index < length){
+        const number = Math.floor(Math.random() * range);
+        if(!array.includes(number)){
+            array.push(number);
+            index++;
+        }
+    }
+
+    return array;
+}

@@ -41,6 +41,8 @@ const VideoCard = ({video, setCurrentVideo, leftSide, rightSide}) => {
             ) {
                 const leftWidth = getNumFromCSSUnit(getStyle(leftSide, 'width'), 'px');
                 const rightWidth = getNumFromCSSUnit(getStyle(rightSide, 'width'), 'px');
+                // console.log(bounds.left, bounds.width, leftWidth);
+
                 const leftAfterScale = bounds.left - ((scale - 1)/2)*bounds.width;
                 const rightAfterScale = bounds.right + ((scale - 1)/2)*bounds.width;
 

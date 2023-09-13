@@ -1,22 +1,18 @@
 import './carousel.css'
-import { videos } from '../../assets';
 import VideoCard from '../video-card/video-card';
 import VideoInfo from '../video-info/video-info';
 import { useRef, useState } from 'react';
 import { getNumFromCSSUnit, getRootStyle, getStyle } from '../../helper';
 import { ITEM_PER_SCREEN, INITIAL_INDEX, VIDEO_CARD_WIDTH, SLIDE_TRANSITION_DELAY } from '../../constants';
 
-const Carousel = ({name}) => {
+const Carousel = ({name, videos}) => {
     const mainRef = useRef(null);
     const boxRefLeft = useRef(null);
     const leftSideBar = useRef(null);
     const rightSideBar = useRef(null);
     const initialIndex = Number(getRootStyle(INITIAL_INDEX));
     const [sliderIndex, setSliderIndex] = useState(initialIndex);
-    const videoArray = [      // These are just sample data...
-        videos[0], videos[1], videos[2], videos[3], videos[4], videos[5], videos[6], videos[7], videos[8], videos[9],   
-    ];
-    const [videoCards, setvideoCards] = useState(videoArray);
+    const [videoCards, setvideoCards] = useState(videos);
     const [currentVideo, setCurrentVideo] = useState(null);
 
     // On Click side bars...
@@ -24,7 +20,7 @@ const Carousel = ({name}) => {
         let index = sliderIndex;
         const itemsPerScreen = Number(getRootStyle(ITEM_PER_SCREEN));
         const videoCardslength = videoCards.length;
-        const videosLength = videoArray.length;
+        const videosLength = videos.length;
         const remaining = videosLength - itemsPerScreen;
         const itemIndex = index - initialIndex;
         const delay = getNumFromCSSUnit(getRootStyle(SLIDE_TRANSITION_DELAY), 's');

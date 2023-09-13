@@ -8,8 +8,15 @@
     position: relative;
 }
 
+#home-menu-container {
+    position: relative;
+    width: 100%;
+}
+
 #home-menu {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
+    position: absolute;
+    top: -13vw;
 }

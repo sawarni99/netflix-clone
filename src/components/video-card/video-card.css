@@ -95,12 +95,13 @@
     display: flex;
     align-items: center;
     gap: 3%;
+    flex-wrap: wrap;
 }
 
 #video-card-info-bottom div {
     border-radius: 500px;
-    height: 5px;
-    width: 5px;
+    height: 3px;
+    width: 3px;
     background-color: var(--text-color-gray);
     opacity: 0.6;
 }

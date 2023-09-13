@@ -157,7 +157,12 @@ const Carousel = ({name}) => {
                     {
                         videoCards.map(video => {
                             const key = Date.now() * Math.random() // Generating unique key...
-                            return <VideoCard setCurrentVideo={onInfoClicked} video={video} key={key} />
+                            return <VideoCard 
+                                setCurrentVideo={onInfoClicked} 
+                                video={video} 
+                                key={key} 
+                                leftSide={leftSideBar}
+                                rightSide={rightSideBar} />
                         })
                     }
                 </div>

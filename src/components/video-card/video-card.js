@@ -1,13 +1,15 @@
+import { getNumFromCSSUnit, getStyle } from '../../helper';
 import './video-card.css'
 import { useState, useRef, useEffect } from 'react';
 
-const VideoCard = ({video, setCurrentVideo}) => {
+const VideoCard = ({video, setCurrentVideo, leftSide, rightSide}) => {
 
     const [ended, setEnded] = useState(true);
     const [mouseOver, setMouseOver] = useState(false);
     const mainRef = useRef(null);
     const videoRef = useRef(null);
     let mousePosition = {x: 0, y:0};
+    const scale = 1.5;
 
     useEffect(() => {
         const mouseMoveHandler = (event) => {
@@ -29,7 +31,7 @@ const VideoCard = ({video, setCurrentVideo}) => {
         setCurrentVideo(video);
     }
 
-    const onMouseOver = () => {
+    const onMouseOver = (event) => {
         const bounds = mainRef.current.getBoundingClientRect();
 
         setTimeout(() => {
@@ -37,7 +39,22 @@ const VideoCard = ({video, setCurrentVideo}) => {
                 (bounds.left <= mousePosition.x && mousePosition.x <= bounds.right) &&
                 (bounds.top <= mousePosition.y && mousePosition.y <= bounds.bottom)
             ) {
-                mainRef.current.style.transform = 'scale(1.5)';
+                const leftWidth = getNumFromCSSUnit(getStyle(leftSide, 'width'), 'px');
+                const rightWidth = getNumFromCSSUnit(getStyle(rightSide, 'width'), 'px');
+                const leftAfterScale = bounds.left - ((scale - 1)/2)*bounds.width;
+                const rightAfterScale = bounds.right + ((scale - 1)/2)*bounds.width;
+
+                if(leftAfterScale <= leftWidth){
+                    mainRef.current.style.transform = `translateX(${leftWidth}px) scale(${scale})`;
+
+                } else if(rightAfterScale >= (window.innerWidth - rightWidth)){
+                    mainRef.current.style.transform = `translateX(-${rightWidth}px) scale(${scale})`;
+
+                } else {
+                    mainRef.current.style.transform = `scale(${scale})`;
+                }
+                
+
                 setMouseOver(() => {
                     setEnded(false);
                     return true;

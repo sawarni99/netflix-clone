@@ -21,6 +21,7 @@ const ManageProfilePage = () =>{
                                         name={name} 
                                         dp={dp}
                                         onClick={() => onClick(name)}
+                                        key={name}
                                     />
                                 )
                 }

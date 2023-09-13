@@ -16,7 +16,7 @@
 }
 
 #manage-profile-heading{
-    font-size: 335%;
+    font-size: 3.5vw;
     text-align: center;
     margin: 1%;
 }
@@ -39,7 +39,7 @@
     color: var(--text-color-gray);
     border: 1px solid var(--text-color-gray);
     font-family: netflix-sans;
-    font-size: 113%;
+    font-size: 1.15vw;
     margin-top: 2.5%;
     cursor: pointer;
 }

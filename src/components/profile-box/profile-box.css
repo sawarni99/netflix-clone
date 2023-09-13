@@ -22,7 +22,7 @@
 #profile-box-name{
     color: var(--text-color-gray);
     text-align: center;
-    font-size: 125%;
+    font-size: 1.3vw;
 }
 
 #profile-box:hover > #profile-box-name {

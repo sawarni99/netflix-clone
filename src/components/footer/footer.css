@@ -1,0 +1,31 @@
+#footer {
+    padding: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#footer-top {
+    display: flex;
+}
+
+#footer-top img {
+    width: 2.2%;
+    margin: 10px;
+}
+
+#footer-bottom {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-gap: 10px;
+    font-size: 0.9vw;
+    color: var(--text-color-gray)
+}
+
+#footer-bottom div {
+    cursor: pointer;
+}
+
+#footer-bottom div:hover {
+    text-decoration: underline;
+}

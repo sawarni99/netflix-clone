@@ -6,6 +6,7 @@ import { videos } from '../../assets';
 import { useState } from 'react';
 import Carousel from '../../components/carousel/carousel';
 import { getRandomUniqueNumber } from '../../helper';
+import Footer from '../../components/footer/footer';
 
 function Home() {
     const video = videos[11]; // This video is for preview...
@@ -48,7 +49,10 @@ function Home() {
                         <Carousel name='Popular on Netflix' videos={getRandomVideos(10)} />
                     </div>
                 </section>
-            </main>     
+                <footer>
+                    <Footer />
+                </footer> 
+            </main>
         </div>
     )
 }

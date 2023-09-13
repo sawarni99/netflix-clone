@@ -11,16 +11,16 @@ I have created the responsive landing page UI of netflix with React.JS and vanil
 * Showing profile Menu when hovered effect.
 
 ### Please click on this image to see a video preview of this project
-[![Watch a video](https://github.com/sawarni99/netflix-clone/blob/master/samples/Preview-Page.png)](https://youtu.be/Ue6EgAy82rY)
+[![Watch a video](https://github.com/sawarni99/netflix-clone/blob/main/samples/Preview-Page.png)](https://youtu.be/Ue6EgAy82rY)
 
 ### Info page
-![Info Page](https://github.com/sawarni99/netflix-clone/blob/master/samples/Info-Page.png)
+![Info Page](https://github.com/sawarni99/netflix-clone/blob/main/samples/Info-Page.png)
 
 ### Video menu
-![Videos](https://github.com/sawarni99/netflix-clone/blob/master/samples/Menu-Page.png)
+![Videos](https://github.com/sawarni99/netflix-clone/blob/main/samples/Menu-Page.png)
 
 ### On hover effect
-![Hover](https://github.com/sawarni99/netflix-clone/blob/master/samples/Zoom-Effect.png)
+![Hover](https://github.com/sawarni99/netflix-clone/blob/main/samples/Zoom-Effect.png)
 
 ## Technologies Used
 * React JS

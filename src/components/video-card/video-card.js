@@ -1,5 +1,5 @@
 import './video-card.css'
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const VideoCard = ({video, setCurrentVideo}) => {
 
@@ -7,6 +7,19 @@ const VideoCard = ({video, setCurrentVideo}) => {
     const [mouseOver, setMouseOver] = useState(false);
     const mainRef = useRef(null);
     const videoRef = useRef(null);
+    let mousePosition = {x: 0, y:0};
+
+    useEffect(() => {
+        const mouseMoveHandler = (event) => {
+            mousePosition.x = event.clientX;
+            mousePosition.y = event.clientY;
+        }
+
+        window.addEventListener('mousemove', mouseMoveHandler);
+        return(()=>{
+            window.removeEventListener('mousemove', mouseMoveHandler);
+        })
+    });
 
     const onEnded = () => {
         setEnded(true)
@@ -17,13 +30,24 @@ const VideoCard = ({video, setCurrentVideo}) => {
     }
 
     const onMouseOver = () => {
-        setMouseOver(() => {
-            setEnded(false);
-            return true;
-        });
+        const bounds = mainRef.current.getBoundingClientRect();
+
+        setTimeout(() => {
+            if(
+                (bounds.left <= mousePosition.x && mousePosition.x <= bounds.right) &&
+                (bounds.top <= mousePosition.y && mousePosition.y <= bounds.bottom)
+            ) {
+                mainRef.current.style.transform = 'scale(1.5)';
+                setMouseOver(() => {
+                    setEnded(false);
+                    return true;
+                });
+            }
+        }, 500);
     }
 
     const onMouseOut = () => {
+        mainRef.current.style.transform = 'none';
         setMouseOver(() => {
             setEnded(true);
             return false;
@@ -38,7 +62,7 @@ const VideoCard = ({video, setCurrentVideo}) => {
     genres.pop();
 
     return (
-        <div id='video-card' ref={mainRef} onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
+        <div id='video-card' ref={mainRef} onMouseEnter={onMouseOver} onMouseLeave={onMouseOut}>
             {!ended ? 
                 <video 
                     id='video-card-video' 

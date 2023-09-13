@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Carousel from '../../components/carousel/carousel';
 
 function Home() {
-    const video = videos[12];
+    const video = videos[11];
     const [infoClicked, setInfoClicked] = useState(false);
     const [startTime, setStartTime] = useState(0);
 

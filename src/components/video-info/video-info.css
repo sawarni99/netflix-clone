@@ -25,6 +25,8 @@
 #video-info-video {
     width: 850px;
     margin-top: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
     height: 110vh;
     border-radius : 8px 8px 0 0;
     background-color: var(--bg-color);
@@ -101,4 +103,21 @@
 
 #video-info-right-genre span {
     color: var(--text-color-gray)
+}
+
+/* Screen resizing media queries */  
+@media (max-width: 800px) {
+    #video-info {
+        font-size: 2vw;
+    }
+
+    #video-info-left-desc {
+        font-size: 2vw;
+    }
+
+    #video-info-left-rated {
+        font-size: 1.5vw;
+        width: 20%;
+        padding: 2px;
+    }
 }

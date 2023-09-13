@@ -1,3 +1,8 @@
+#carousel {
+    padding-bottom: 20px;
+    position: relative;
+}
+
 #carousel-header {
     margin: 30px calc(var(--box-gap) + var(--margin-value)) 10px calc(var(--box-gap) + var(--margin-value));
     display: flex;

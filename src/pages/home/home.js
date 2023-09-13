@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Carousel from '../../components/carousel/carousel';
 
 function Home() {
-    const video = videos[11];
+    const video = videos[11]; // This video is for preview...
     const [infoClicked, setInfoClicked] = useState(false);
     const [startTime, setStartTime] = useState(0);
 
@@ -35,13 +35,11 @@ function Home() {
                     /> 
                 }
 
-                <div id='home-menu-container'>
-                    <div id='home-menu'>
-                        <div id='home-menu-section'>
-                            <Carousel name='Popular on Netflix' />
-                        </div>
-                    </div>
-                </div>
+                <section id='home-menu'>
+                        <Carousel name='Blockbuster' />
+                        <Carousel name='Trending Now' />
+                        <Carousel name='Popular on Netflix' />
+                </section>
             </main>     
         </div>
     )

@@ -8,18 +8,8 @@
     position: relative;
 }
 
-#home-menu-container{
-    width: 100%;
-    background: var(--bg-color);
-    height: 80vh;
-}
-
 #home-menu {
     width: 100%;
-    position: relative;
-}
-
-#home-menu-section {
-    position: absolute;
-    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
 }

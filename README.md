@@ -10,6 +10,9 @@ I have created the responsive landing page UI of netflix with React.JS and vanil
 * Search Bar open/close effect.
 * Showing profile Menu when hovered effect.
 
+#### Hosted link
+[Netflix Landing Page](https://sawarni99.github.io/netflix-clone/)
+
 ### Please click on this image to see a video preview of this project
 [![Watch a video](https://github.com/sawarni99/netflix-clone/blob/main/samples/Preview-Page.png)](https://youtu.be/Ue6EgAy82rY)
 
